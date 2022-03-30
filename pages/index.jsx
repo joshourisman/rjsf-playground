@@ -1,5 +1,4 @@
 import { useState } from "react";
-import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
@@ -8,7 +7,7 @@ import Form from "@rjsf/core";
 
 const ReactJson = dynamic(import("react-json-view"), { ssr: false });
 
-const Home: NextPage = () => {
+const Home = () => {
   const [schema, setSchema] = useState({
     title: "A form for the playground",
     properties: { firstName: { type: "string" } },
